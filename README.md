@@ -1,8 +1,4 @@
 # Portfolio
-Photography portfolio using Bootstrap and Flask
+Photography portfolio using Bootstrap and Flask. Gallery styling done with Baguettebox. Images served dynamically with Flask.
 
-Gallery styling done with Baguettebox
-
-Images served dynamically through Flask
-
-WIP
+Repo does NOT include 'Lib', 'Scripts', 'Include' and '__Pycache__' 
