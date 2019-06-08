@@ -1,0 +1,118 @@
+body {
+    background-color: #FFFFFF;
+    min-height: 100vh;
+    font: normal 16px sans-serif;
+    padding: 10px 0;
+}
+
+.container.gallery-container {
+    background-color: #fff;
+    color: #35373a;``
+    min-height: 100vh;
+    padding: 10px 10px;
+}
+
+.gallery-container h1 {
+    text-align: center;
+    margin-top: 5px;
+    font-weight: lighter;
+    font-family: Lora
+}
+
+.gallery-container p.display-4 {
+    font-weight: 250;
+}
+
+.tz-gallery {
+    padding: 15px;
+}
+
+/* Override bootstrap column paddings */
+.tz-gallery .row > div {
+    padding: 15px;
+}
+
+.tz-gallery .lightbox img {
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+}
+
+.tz-gallery .lightbox:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -13px;
+    margin-left: -13px;
+    opacity: 0;
+    color: #fff;
+    content: '\e003';
+    pointer-events: none;
+    z-index: 9000;
+    transition: 0.4s;
+}
+
+
+.tz-gallery .lightbox:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(230, 230, 230, 0.5);
+    content: '';
+    transition: 0.4s;
+}
+
+.tz-gallery .lightbox:hover:after,
+.tz-gallery .lightbox:hover:before {
+    opacity: 80;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+.nav-item .active {
+    fill: 000000;
+}
+
+.nav-item {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.navbar {
+  top: 0;
+  width: 100%;
+  transition: top 0.5s;
+}
+
+.collapsingNavbar3 {
+  position: relative;
+  right: 0;
+}
+
+.navbar-toggler-icon {
+  right: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-toggler {position: fixed;}
+  .navbar-toggler a.icon {
+    right: 0;
+    top: 0;
+  }
+  .navbar-toggler a {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+}
+
+@media(max-width: 768px) {
+    body {
+        padding: 0;
+    }
+}

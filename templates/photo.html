@@ -1,0 +1,25 @@
+{% extends "nav.html" %}
+
+{% block title %}
+	<title>Photography</title>
+{% endblock %}
+
+{% block content %}
+	<div class="container gallery-container">
+	  <p class="page-description text-center"></p>
+	    <div class="tz-gallery">
+				<div class="row">
+	      	{%for img in photos %}
+									<div class="col-sm">
+										<div class="card">
+		                    <a class="lightbox" href="static/imgs/photos/{{img}}.html">
+		                    <img src="static/imgs/photos/{{img}}" alt="static/imgs/photos/{{img}}" class="card-img-top">
+		                    </a>
+	          				</div>
+									</div>
+	        {% endfor %}
+					</div>
+				</div>
+	</div>
+
+{% endblock %}
