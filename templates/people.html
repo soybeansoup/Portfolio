@@ -1,0 +1,53 @@
+{% extends "nav.html" %}
+
+{% block title %}
+	<title> Simon Schonemann-Poppeliers </title>
+{% endblock %}
+
+{% block content %}
+<div class="container gallery-container">
+    <div class="tz-gallery">
+    	<div class="row mb-3">
+		    <div class="col">
+	        	{%for img in left%}
+	        		<div class="row mb-3">
+			            <div class="col-12">
+			                <div class="card">
+			                    <a class="lightbox" href="static/imgs/people/left/{{img}}">
+			                    <img src="static/imgs/people/left/{{img}}" alt="static/imgs/people/left/{{img}}" class="card-img-top">
+			                    </a>
+			                </div>
+			            </div>
+		            </div>
+		        {% endfor %}
+		    </div>
+		    <div class="col">
+	        	{%for img in middle%}
+	        		<div class="row mb-3">
+			            <div class="col-12">
+			                <div class="card">
+			                    <a class="lightbox" href="static/imgs/people/middle/{{img}}">
+			                    <img src="static/imgs/people/middle/{{img}}" alt="static/imgs/people/middle/{{img}}" class="card-img-top">
+			                    </a>
+			                </div>
+			            </div>
+		            </div>
+		        {% endfor %}
+		    </div>
+		    <div class="col">
+	        	{%for img in right%}
+	        		<div class="row mb-3">
+			            <div class="col-12">
+			                <div class="card">
+			                    <a class="lightbox" href="static/imgs/people/right/{{img}}">
+			                    <img src="static/imgs/people/right/{{img}}" alt="static/imgs/people/right/{{img}}" class="card-img-top">
+			                    </a>
+			                </div>
+			            </div>
+		            </div>
+		        {% endfor %}
+		    </div>
+		  </div>
+		</div>
+  </div>
+{% endblock %}
