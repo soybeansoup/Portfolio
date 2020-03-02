@@ -11,10 +11,51 @@ def home():
 	right = os.listdir('static/imgs/home/right')
 	return render_template('home.html', left=left, middle=middle, right=right )
 
+
+# Photography gallery Routing
 @app.route("/photo")
 def photo():
+	names = []
 	photos = os.listdir('static/imgs/photos')
-	return render_template('photo.html', photos=photos)
+	for i in photos:
+		names.append(i.split('.')[0])
+	return render_template('photo.html', photos=photos, names=names)
+
+
+@app.route("/People")
+def people():
+	left = os.listdir('static/imgs/people/left')
+	middle = os.listdir('static/imgs/people/middle')
+	right = os.listdir('static/imgs/people/right')
+	return render_template('people.html', left=left, middle=middle, right=right )
+
+
+@app.route("/Places")
+def places():
+	left = os.listdir('static/imgs/places/left')
+	middle = os.listdir('static/imgs/places/middle')
+	right = os.listdir('static/imgs/places/right')
+	return render_template('places.html', left=left, middle=middle, right=right )
+
+
+# Video routing
+@app.route("/video")
+def video():
+	videos = [
+	"https://www.youtube.com/embed/X9TZzdsQw54",
+	"https://www.youtube.com/embed/YCWXgM5Wn70",
+	"https://www.youtube.com/embed/UcdLmmuSjNU",
+	"https://www.youtube.com/embed/0nAfgvR3IDc",
+	"https://www.youtube.com/embed/si8MGxd7GJs",
+	"https://www.youtube.com/embed/9JJXv1te4SM"
+	]
+	return render_template('video.html', videos=videos)
+
+
+# Info routing
+@app.route("/about")
+def about():
+	return render_template('about.html')
 
 if __name__ == '__main__':
-	app.run(debug=True)
+	app.run(host='0.0.0.0')
