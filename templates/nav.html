@@ -7,7 +7,7 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script type=text/javascript src="{{url_for('static', filename='static/nav.js')}}"></script>
-	
+
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/gallery-fluid.css') }}">
@@ -20,12 +20,12 @@
 <body>
 	<div id="navbar">
 		<nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
-		    <a href="/" class="navbar-brand d-flex w-50 mr-auto">Simon Schonemann-Poppeliers</a>
+		    <a href="/" class="navbar-brand d-flex w-50 mr-auto">Simon Rainier <br/> Schönemann-Poppeliers </a>
 		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
 		        <span class="navbar-toggler-icon"></span>
 		    </button>
-		    <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
-		        <ul class="navbar-nav w-100 justify-content-center">
+		    <div class="navbar-collapse collapse" id="collapsingNavbar3">
+		        <ul class="navbar-nav">
 		            <li class="nav-item">
 		                <a class="nav-link" href="/photo">Photo</a>
 		            </li>
@@ -33,12 +33,12 @@
 		                <a class="nav-link" href="/home">Home</a>
 		            </li>
 		            <li class="nav-item">
-		                <a class="nav-link" href="#">Video</a>
+		                <a class="nav-link" href="/video">Video</a>
 		            </li>
 		        </ul>
 		        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
 		            <li class="nav-item">
-		                <a class="nav-link" href="#">About</a>
+		                <a class="nav-link" href="/about">About</a>
 		            </li>
 		            <li class="nav-item">
 		                <a class="nav-link" href="#">Contact</a>
@@ -50,6 +50,16 @@
   {% block content %}
 
   {% endblock %}
+	<div class="footer">
+		<footer>
+					<a href="https://www.instagram.com/soybeansopa/">
+						<img class="social" src="static/imgs/footer/insta.png" alt="static/imgs/footer/insta.png">
+					</a>
+					<a href="https://github.com/soybeansoup/">
+						<img class="social" src="static/imgs/footer/github.png" alt="static/imgs/footer/github.png">
+					</a>
+		</footer>
+	</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
 <script>baguetteBox.run('.tz-gallery');</script>
 </body>
