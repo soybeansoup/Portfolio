@@ -22,6 +22,13 @@ def photo():
 	return render_template('photo.html', photos=photos, names=names)
 
 
+@app.route("/Documentary")
+def documentary():
+	left = os.listdir('static/imgs/documentary/left')
+	middle = os.listdir('static/imgs/documentary/middle')
+	right = os.listdir('static/imgs/documentary/right')
+	return render_template('documentary.html', left=left, middle=middle, right=right )
+
 @app.route("/People")
 def people():
 	left = os.listdir('static/imgs/people/left')
@@ -55,7 +62,16 @@ def video():
 # Info routing
 @app.route("/about")
 def about():
-	return render_template('about.html')
+	about_img = os.listdir('static/imgs/about')[0]
+	return render_template('about.html', about_img=about_img)
+
+
+# Contact routing
+@app.route("/contact")
+def contact():
+	contact_img = os.listdir('static/imgs/contact')[0]
+	return render_template('contact.html', contact_img=contact_img)
+	
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0')
