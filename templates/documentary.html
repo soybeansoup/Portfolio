@@ -1,0 +1,78 @@
+{% extends "nav.html" %}
+
+{% block title %}
+	<title> Simon Schonemann-Poppeliers </title>
+{% endblock %}
+
+{% block content %}
+<div class="doc-title">
+	<h3>The Crispín Family</h3>
+	<hr size="3" width="75%">
+</div>
+<div class="doc">
+	<div class="doc-text">
+		<p>
+			The Inca people were one of the first cultures to brave heights above 6,000 meters in altitude. They would pay tribute to the mountains by climbing sacred peaks and sacrificing living animals to the spirits in offering. By using seven layer alpaca/vicuña fur boots they were able to travel through treacherous Andean conditions with relative ease. 
+			<br>
+			<br>
+			The Crispín family lives in the high altitude pueblo of Pacchanta. Tucked away in the Vilcanota range of the Peruvian Andes, the family home lies at the feet of Ausangate, a 6,384 meter peak South-East of the city of Cusco. This mountain spirit or Apu is sacred to many of the Andean peoples who surround it, many of whom were killed during Spanish imperialism. Due to the lack of accessibility in many high altitude communities, these pueblos were some of the only groups left largely undisturbed by the Spanish.
+		</p>
+	</div>
+			<div class="container gallery-container">
+			    <div class="tz-gallery">
+			    	<div class="row mb-3">
+					    <div class="col">
+				        	{%for img in left%}
+				        		<div class="row mb-3">
+						            <div class="col-12">
+						                <div class="card">
+						                    <a class="lightbox" href="static/imgs/documentary/left/{{img}}">
+						                    <img src="static/imgs/documentary/left/{{img}}" alt="static/imgs/documentary/left/{{img}}" class="card-img-top">
+						                    </a>
+						                </div>
+						            </div>
+					            </div>
+					        {% endfor %}
+					    </div>
+					    <div class="col">
+				        	{%for img in middle%}
+				        		<div class="row mb-3">
+						            <div class="col-12">
+						                <div class="card">
+						                    <a class="lightbox" href="static/imgs/documentary/middle/{{img}}">
+						                    <img src="static/imgs/documentary/middle/{{img}}" alt="static/imgs/documentary/middle/{{img}}" class="card-img-top">
+						                    </a>
+						                </div>
+						            </div>
+					            </div>
+					        {% endfor %}
+					    </div>
+					    <div class="col">
+				        	{%for img in right%}
+				        		<div class="row mb-3">
+						            <div class="col-12">
+						                <div class="card">
+						                    <a class="lightbox" href="static/imgs/documentary/right/{{img}}">
+						                    <img src="static/imgs/documentary/right/{{img}}" alt="static/imgs/documentary/right/{{img}}" class="card-img-top">
+						                    </a>
+						                </div>
+						            </div>
+					            </div>
+					        {% endfor %}
+					    </div>
+					  </div>
+					</div>
+			  </div>
+		<div class="doc-text">
+			<p>
+	 			It is estimated that of the many millions of international travelers that visit Peru every year, over 80% will make their way through the city of Cusco. With tourism as the third largest contributor to the GDP of the Peruvian state (only behind fishing and mining) the industry is carefully managed and monitored while large section of the population cater to visitors year-round. While it appears everyone has a hand in the honeypot that is tourism, most of the economic stimulation does not touch the lives of those who need and deserve it most. As one might guess, foreign business and upper class nationals are the primary benefactors of this industry.
+				<br>
+				<br>
+				While some modern groups and other cultures around the world consider the mountains to be both sacred and untouchable, mountain climbing is an integrated part of the Crispín family lifestyle. Not only is it the way they make their livelihood, but also a manner in which they pay respect and connect with their ancestors.
+				<br>
+				<br>
+				These images were made possible by the graciousness of the Crispín family, the support of Duncan McDaniel and Vahitare Beltrami, and with assistance from the American Alpine Club. They provide merely a glimpse into the continuum of shifting Andean lifestyle.
+			</p>
+		</div>
+</div>
+{% endblock %}
