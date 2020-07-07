@@ -1,2 +1,2 @@
 # Portfolio
-Photography portfolio using Bootstrap and Flask. Gallery styling done with Baguettebox. Images served dynamically with Flask/Jinja.
+Photography portfolio using Flask and Jinja. Images served dynamically with Flask/Jinja.
